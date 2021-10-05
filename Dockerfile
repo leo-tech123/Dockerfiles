@@ -17,7 +17,7 @@ RUN git clone https://github.com/leotech123/maven-web-app.git
 #Maven
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /app
-COPY --from=repo /app/maven-web-application  /app 
+COPY --from=repo /app/maven-web-app  /app 
 RUN mvn install
 
 #Tomcat

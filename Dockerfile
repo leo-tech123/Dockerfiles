@@ -12,12 +12,12 @@ FROM alpine/git as repo
 MAINTAINER name mylandmarktech@gmail.com
 
 WORKDIR /app
-RUN git clone https://github.com/LandmakTechnology/maven-web-app.git
+RUN git clone https://github.com/leotech123/maven-web-app.git
 
 #Maven
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /app
-COPY --from=repo /app/maven-web-app  /app 
+COPY --from=repo /app/maven-web-application  /app 
 RUN mvn install
 
 #Tomcat
